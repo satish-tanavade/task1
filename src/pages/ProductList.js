@@ -31,7 +31,7 @@ function ProductList() {
         })
         if (BagData) {
             const update = BagData.map(item => {
-                if (item.id === id) {
+                if (item.id === id && item.quantity > 0) {
                     return {
                         ...item, quantity: item.quantity - 1
                     }
